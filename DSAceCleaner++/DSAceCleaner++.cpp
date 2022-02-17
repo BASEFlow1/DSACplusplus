@@ -25,8 +25,14 @@ int main() {
     std::vector<std::string> chatList;
     std::vector<std::string> nameList;
     std::vector<std::string> contentList;
-    std::vector<std::string> exclusions = {"Death[0]", "Tip[0]", "Options[0]", "has requested to dock[1]", "CONSOLE[0]", "//[3]", "/[3]"};
-    int exclusionLength = exclusions.size();
+    //std::string exclusions[3][4] =  {
+    //                                {"Death", "Tip", "Options", "CONSOLE"},
+    //                                {"has requested to dock"},
+    //                                {"//", "/"}
+    //                               };
+    std::vector<std::string> nameExclusions = { "Death", "Tip", "Options", "CONSOLE" };
+    std::vector<std::string> contentExclusions = { "has requested to dock" };
+    std::vector<std::string> contentBeginningExclusions = { "//", "/" };
     std::string inputFile = "D:\\repos\\DSAceCleaner\\DSAce.log";
     std::string outputFile = "DSAce_cleaned.log";
     bool includeTimestamps = false;
